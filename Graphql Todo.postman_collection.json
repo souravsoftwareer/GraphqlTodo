@@ -95,7 +95,7 @@
 						"body": {
 							"mode": "graphql",
 							"graphql": {
-								"query": "mutation {\n    updateUser(id:1,input: { firstname: \"Brwonie\", lastname: \"Law\" }){\n        id\n    } \n}",
+								"query": "mutation {\n    removeUser(id:3){\n        username  \n    }\n}",
 								"variables": ""
 							}
 						},
