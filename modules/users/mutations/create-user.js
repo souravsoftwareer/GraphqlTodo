@@ -1,5 +1,7 @@
 const models = require('../../../models');
 
 module.exports = async (root, { input }, context) => {
-  return models.users.push(input);
+  console.log(input)
+  models.users.push(input);
+  return models.users
 };

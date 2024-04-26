@@ -1,11 +1,15 @@
 const models = require('../../../models');
 
 module.exports = async (root, { id, input }, context) => {
-  const index = models.users.findIndex((item) => item.id === id);
-  const item = models.users.splice(index, 1);
+  console.log("id ",id,"input",input)
+  console.log("typeof ",typeof id)
+  console.log(models.users)
+  id = parseInt(id)
+  const index = models.users.findIndex((ite) => ite.id === id);
+ 
+  console.log("item ",models.users[index],index)
+  models.users[index].firstname = input.firstname
+  models.users[index].lastname = input.lastname
 
-  return models.users.push({
-    ...item,
-    ...input,
-  });
+  return models.users[index]
 };
