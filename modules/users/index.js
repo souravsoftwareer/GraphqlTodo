@@ -8,22 +8,22 @@ const users = require('./queries/users');
 const typeDefs = gql`
   type User {
     id: ID! # The "!" means required
-    firstname: String
-    lastname: String
+    firstName: String
+    lastName: String
     email: String
-    username: String
+    userName: String
   }
 
   input CreateUserInput {
-    firstname: String!
-    lastname: String
+    firstName: String!
+    lastName: String
     email: String!
-    username: String!
+    userName: String!
   }
 
   input UpdateUserInput {
-    firstname: String
-    lastname: String
+    firstName: String
+    lastName: String
   }
 
   extend type Query {
